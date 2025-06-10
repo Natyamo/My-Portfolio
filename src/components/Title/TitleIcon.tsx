@@ -2,7 +2,7 @@ import Image from "next/image";
 import TitleText from "./TitleText";
 import { TitleTextProps } from "@/types/type";
 import { FC } from "react";
-import "./Title.css"
+import "@/styles/globals.css"
 
 const TitleIcon:FC<TitleTextProps> = props => {
     return (

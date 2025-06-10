@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TitleIcon from "@/components/Title/TitleIcon";
-import "../styles/globals.css"
+import "@/styles/globals.css"
 
 export default function Home() {
   return (

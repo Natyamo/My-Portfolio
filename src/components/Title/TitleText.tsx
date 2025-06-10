@@ -1,5 +1,5 @@
 import React, { Children, FC } from "react";
-import "./Title.css";
+import "@/styles/globals.css";
 import { TitleTextProps } from "@/types/type";
 
 const TitleText: FC<TitleTextProps> = props => {
@@ -8,7 +8,7 @@ const TitleText: FC<TitleTextProps> = props => {
         name,
     } = props;
     return (
-        <h1 className="text-sky-600 font-mono text-3xl">
+        <h1 className="text-sky-600 font-mono font-bold text-3xl">
             {title} {name} 
         </h1>
     )
