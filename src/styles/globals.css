@@ -6,24 +6,21 @@
 
     --font-bigtitle: "Oswald", "sans-serif";
 
-    --animate-gradatecolor: gradate-color 3s ease-in-out infinite;
+    --animate-gradatecolor: gradate-color 3s ease-in-out infinite,
+        bounce 800ms infinite;
 
     @keyframes gradate-color {
-  0% {
-    color: #22d3ee; 
-  }
-  20% {
-    color: #14b8a6; /* teal-500 */
-  }
-  60% {
-    color: #10b981; /* emerald-500 */
-  }
-  80% {
-    color: #14b8a6; /* teal-500 */
-  }
-  100% {
-    color: #22d3ee;
-  }
-}
+        0%,
+        100% {
+            color: #22d3ee; 
+        }
+        20%,
+        80% {
+            color: #14b8a6; /* teal-500 */
+        }
+        60% {
+            color: #10b981; /* emerald-500 */
+        }
+    }
 
 }

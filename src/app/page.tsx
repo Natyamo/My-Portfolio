@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <header className="px-6 py-4">
-        <TitleIcon title="My Portfolio" name="なちゃも" />
+        <TitleIcon title="My Portfolio" name="Natyamo" />
       </header>
     </div>
   );

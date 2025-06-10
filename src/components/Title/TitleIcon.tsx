@@ -12,11 +12,12 @@ const TitleIcon:FC<TitleTextProps> = props => {
                         src="/TitleIcon.png"
                         alt="My-Icon"
                         width={80}
-                        height={10}
-                        objectFit="cover"
+                        height={80}
+                        className="rounded-full object-cover border-4 border-slate-700
+                         transition delay-150 duration-500 hover:scale-110"
                     />
                 </span>       
-            <TitleText title="My Portfolio" name="なちゃも" />
+            <TitleText title="My Portfolio" name="Natyamo" />
             </span>
     )
 } 
