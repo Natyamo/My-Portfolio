@@ -8,8 +8,13 @@ const TitleText: FC<TitleTextProps> = props => {
         name,
     } = props;
     return (
-        <h1 className="text-sky-600 font-mono font-bold text-3xl">
-            {title} {name} 
+        <h1 className="
+        font-superbold text-3xl font-bigtitle 
+        transition delay-150 duration-500 
+        hover:scale-110
+        animate-gradatecolor
+        ">
+            　{title} 　　　by {name} 
         </h1>
     )
 }

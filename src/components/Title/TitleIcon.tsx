@@ -6,13 +6,13 @@ import "@/styles/globals.css"
 
 const TitleIcon:FC<TitleTextProps> = props => {
     return (
-            <span className="flex items-center gap-x-10">
+            <span className="flex items-center gap-x-10 bg-slate-800 rounded-full">
                 <span className="w-20 h-20 rounded-full overflow-hidden">
                     <Image
                         src="/TitleIcon.png"
                         alt="My-Icon"
-                        width={180}
-                        height={38}
+                        width={80}
+                        height={10}
                         objectFit="cover"
                     />
                 </span>       
