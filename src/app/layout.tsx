@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${anton.variable} ${darumadrop1.variable} font-sans antialiased bg-slate-900`}
+      <body className={`${anton.variable} ${darumadrop1.variable} font-sans antialiased text-white bg-slate-900`}
       >
         {children}
       </body>
