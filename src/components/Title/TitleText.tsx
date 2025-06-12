@@ -3,15 +3,14 @@ import "@/styles/globals.css";
 import { TitleTextProps } from "@/types/type";
 
 const TitleText: FC<TitleTextProps> = props => {
-    const {
-        title,
-        name,
-    } = props;
+    const { title, name } = props;
     return (
-        <h1 className="relative font-superbold text-4xl font-bigtitle 
-            transition delay-150 duration-500 hover:scale-110 animate-gradatecolor
-        ">
-            　{title} 　　　by {name} 
+        <h1 className="relative animate-gradatecolor">
+            <span className="text-4xl font-anton mr-35">{title}</span>
+            <span className="text-2xl">
+                <span className="mx-1">by</span>
+                <span className="font-daruma1">{name}</span>
+            </span>
         </h1>
     )
 }

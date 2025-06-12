@@ -1,14 +1,14 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@theme inline {
+    --font-anton: var(--font-anton);
+    --font-daruma1: var(--font-daruma1);
+}
 
 @theme {
     --font-weight-superbold: 1000;
 
-    --font-bigtitle: "Oswald", "sans-serif";
-
-    --animate-gradatecolor: gradate-color 3s ease-in-out infinite,
-        bounce 800ms infinite;
-
+    --animate-gradatecolor: gradate-color 3s ease-in-out infinite;
     @keyframes gradate-color {
         0%,
         100% {
