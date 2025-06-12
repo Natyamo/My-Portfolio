@@ -1,4 +1,7 @@
-export type TitleTextProps = {
-    title: string;
-    name: string;
+
+export type TextProps = {
+    name?: string;
+    //career は月数(〇ヶ月)で記述
+    career?: number;
+    langs?: string[];
 }

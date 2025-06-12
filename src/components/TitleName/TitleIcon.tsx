@@ -1,10 +1,10 @@
 import Image from "next/image";
 import TitleText from "./TitleText";
-import { TitleTextProps } from "@/types/type";
+import { TextProps } from "@/types/type";
 import { FC } from "react";
 import "@/styles/globals.css"
 
-const TitleIcon: FC<TitleTextProps> = props => {
+const TitleIcon: FC<TextProps> = props => {
     return (
         <div className="flex items-center gap-x-10 bg-slate-800 rounded-l-[40px] rounded-r-xl h-20 overflow-hidden">
             <div className="w-20 h-20 rounded-full overflow-hidden">
@@ -17,7 +17,7 @@ const TitleIcon: FC<TitleTextProps> = props => {
                      transition delay-150 duration-500 hover:scale-110"
                 />
             </div>
-            <TitleText title="My Portfolio" name="Natyamo" />
+            <TitleText name="Natyamo" />
         </div>
     )
 }
