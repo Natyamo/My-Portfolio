@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Darumadrop_One } from "next/font/google";
+import { Anton, Darumadrop_One, Raleway } from "next/font/google";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 //google fonts settings
 const anton = Anton({
-  weight: "400",
+  weight: ["400"],
   subsets: ["latin"],
   variable: "--font-anton",
 });
@@ -20,6 +20,12 @@ const darumadrop1 = Darumadrop_One({
   variable: "--font-daruma1",
 });
 
+const raleway = Raleway({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-raleway", 
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${anton.variable} ${darumadrop1.variable} font-sans antialiased bg-slate-900 text-white`}
+      <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-800 text-white`}
       >
         {children}
       </body>
