@@ -14,7 +14,7 @@ const TopText: FC<TopProps> = props => {
     }
 
     return (
-        <div className="mt-7 text-[18px] font-raleway">
+        <div className="ml-15 mt-15 text-[22px] font-raleway">
             <p>I enjoy learning programming every day!</p>
             <p className="mt-3">Programming Career：<strong className="text-2xl">{getMonthOrYear(career)}</strong></p>
         </div>

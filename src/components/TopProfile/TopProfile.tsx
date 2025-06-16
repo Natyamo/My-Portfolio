@@ -11,7 +11,7 @@ const TopProfile: FC<TopProps> = props => {
 
     return (
         <div>
-            <section className="bg-slate-700 p-8 rounded-4xl border-4 border-slate-800 shadow-xl/40">
+            <section className="bg-slate-700 p-15 rounded-4xl border-4 border-slate-800 shadow-xl/40">
                 <div className="flex">
                     <TopTitle name={name} />
                     <TopIcon />

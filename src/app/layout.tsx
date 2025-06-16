@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Anton, Darumadrop_One, Raleway } from "next/font/google";
 import "@/styles/globals.css";
 
@@ -35,7 +36,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-800 text-white`}
       >
-        {children}
+        <AppRouterCacheProvider>
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
