@@ -9,10 +9,10 @@ const TopHome: FC<TopProps> = props => {
 
     return (
         <div>
-            <header>
-                <NavButton />
+            <header className="sticky">
+                <NavButton name={name} />
             </header>
-            <div className="flex justify-center items-center py-8 m-2">
+            <div className="flex justify-center items-center mt-50">
                 <TopProfile name={name} career={career} />
             </div>
         </div>

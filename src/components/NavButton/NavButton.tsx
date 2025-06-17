@@ -5,9 +5,14 @@ import Link from "next/link";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 const NavButton: FC<TopProps> = props => {
+    const { name } = props;
 
     return (
-        <div className="m-2 p-3 bg-slate-700 rounded-2xl border-4 border-slate-800 shadow-xl/20">
+        <div className="m-2 p-3 bg-slate-700/80 rounded-2xl border-4 border-slate-800/40 shadow-xl/20">
+            <div className="absolute top-2">
+                <h1 className="text-[12px] font-daruma1 leading-tight">Biginner Programer</h1>
+                <h2 className="text-4xl font-daruma1 animate-gradatecolor">{name}</h2>
+            </div>
             <nav className="flex justify-center items-center space-x-5">
                 <div className="-translate-y-0.5 transition delay-75 duration-300 ease-out hover:translate-y-0.5 text-slate-400 border-2 border-slate-400 rounded-2xl
                             hover:text-slate-100 hover:border-slate-100">
