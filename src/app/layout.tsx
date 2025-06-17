@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-600 text-white`}
+      <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-600 text-white text-2xl`}
       >
         <AppRouterCacheProvider>
           {children}
