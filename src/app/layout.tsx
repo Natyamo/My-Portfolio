@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Anton, Darumadrop_One, Raleway } from "next/font/google";
 import "@/styles/globals.css";
+import { SectionsProvider } from "@/components/Context/Context";
+import { sections } from "@/components/TopNews/TopNews";
+import { name } from "@/components/TopHome/TopHome";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -36,9 +38,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-600 text-white text-2xl`}
       >
-        <AppRouterCacheProvider>
+        <SectionsProvider sections={sections} name={name}>
           {children}
-        </AppRouterCacheProvider>
+        </SectionsProvider>
       </body>
     </html>
   );

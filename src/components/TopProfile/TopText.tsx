@@ -2,8 +2,10 @@ import { TopProps } from "@/types/type";
 import { FC } from "react";
 import "@/styles/globals.css";
 
-const TopText: FC<TopProps> = props => {
-    const { career } = props;
+const TopText: FC<TopProps> = () => {
+    
+    //careerの変更はここで行う
+    const career = 2;
 
     const getMonthOrYear = (career?: number)=> {
         if (career === undefined) return "undefined";
@@ -19,7 +21,7 @@ const TopText: FC<TopProps> = props => {
             <ul className="flex mt-3 space-x-4">
                 <li className="mt-2">Programming Career : </li>
                 <li className="text-4xl">{career}</li>
-                <li className="mt-2">{getMonthOrYear(career)}</li>
+                <li className="mt-2">{getMonthOrYear(career)} !!!</li>
             </ul>
         </div>
     )

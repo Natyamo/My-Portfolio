@@ -1,14 +1,14 @@
 import Image from "next/image";
 import "@/styles/globals.css";
-import TopHome from "@/components/TopHome/TopHome";
+import { TopHome } from "@/components/TopHome/TopHome";
 import AboutMe from "./about/AboutMe";
 import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
 
 export default function Home() {
   return (
     <div>
-      <TopHome name="Natyamo" career={2} />
-      <div id="about" className="flex justify-center">
+      <TopHome />
+      <div id="about" className="relative flex justify-center">
         <AboutMe />
       </div>
       <ScrollToTopButton />
