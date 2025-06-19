@@ -27,7 +27,7 @@ export const NaviContact2: FC = () => {
       >
         <MailOutlineIcon sx={{ fontSize: 36 }} />
       </span>
-      <p className="absolute top-7 text-[12px]">contact</p>
+      <p className="absolute top-8 text-[12px]">Contact</p>
     </div>
   );
 };
@@ -54,7 +54,7 @@ export const HomeButton2: FC = () => {
       >
         <HomeSharpIcon sx={{ fontSize: 36 }} />
       </span>
-      <p className="absolute top-7 text-[12px]">top</p>
+      <p className="absolute top-8 text-[12px]">Top</p>
     </div>
   );
 };
