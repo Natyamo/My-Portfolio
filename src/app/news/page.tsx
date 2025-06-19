@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import "@/styles/globals.css";
 import { useSections } from "@/components/Context/Context";
 import { HomeButton } from "@/components/Navigation/NaviButton";
+import { HomeButton2 } from "@/components/Navigation/NaviButton";
 import Link from "next/link";
 import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
 import HandDrawnUnderline from "@/components/CreateSVG/Hand.DrawUnderLine";
@@ -21,7 +22,7 @@ const NewsList: FC = () => {
                     </div>
                     <nav className="flex justify-center items-center space-x-5">
                         <Link href={"/"}>
-                            <HomeButton />
+                            <HomeButton2 />
                         </Link>
                     </nav>
                 </div>

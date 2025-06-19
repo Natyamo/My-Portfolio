@@ -25,6 +25,34 @@
     }   
 }
 
+@theme {
+    --animate-shake-icon: shake-icon 1.2s ease-in-out;
+    @keyframes shake-icon {
+        0%,
+        100% {
+            rotate: 0deg;
+        }
+        16% {
+            rotate: 13deg;
+        }
+        32% {
+            rotate: -13deg;
+        }
+        48% {
+            rotate: 10deg;
+        }
+        64% {
+            rotate: -10deg;
+        }
+        76% {
+            rotate: 8deg;
+        }
+        85 % {
+            rotate: -8deg;
+        }
+    }
+}
+
 html {
   scroll-behavior: smooth;
 }

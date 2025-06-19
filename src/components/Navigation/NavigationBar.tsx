@@ -3,6 +3,7 @@
 import React, { FC } from "react";
 import "@/styles/globals.css";
 import { NaviContact } from "./NaviButton";
+import { NaviContact2 } from "./NaviButton";
 import { NaviAbout } from "./NaviButton";
 import { useSections } from "@/components/Context/Context";
 
@@ -16,7 +17,7 @@ const NavButton: FC = () => {
                 <h2 className="absolute top-1 text-4xl font-daruma1 animate-gradatecolor">{name}</h2>
             </div>
             <nav className="flex justify-center items-center space-x-5">
-                <NaviContact />
+                <NaviContact2 />
                 <ul>
                     <li>
                         <NaviAbout />
