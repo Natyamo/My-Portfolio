@@ -12,18 +12,15 @@ export const TopHome: FC<TopProps> = props => {
 
     return (
         <div>
-            <header className="sticky top-1">
+            <header className="sticky top-1 z-50">
                 <NavButton />
             </header>
             <div className="flex justify-center items-center">
-                <div className="flex justify-center items-center m-30">
+                <div className="flex justify-center items-center m-30 space-x-10">
                     <TopProfile />
-                </div>
-                <div>
                     <TopNewsList />
                 </div>
-            </div>
-            
+            </div>         
         </div>
     );
 }

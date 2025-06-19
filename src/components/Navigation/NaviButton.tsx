@@ -6,7 +6,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 export const NaviContact: FC = () => {
     return (
-        <div className="relative flex justify-center -translate-y-0.5 transition delay-75 duration-300 ease-out
+        <div className="relative flex justify-center -translate-y-0.5 transition delay-75 duration-200 ease-out
         hover:translate-y-0.5 text-slate-400  hover:text-slate-100"
         >
             <MailOutlineIcon sx={{ fontSize: 36 }} />
@@ -17,7 +17,7 @@ export const NaviContact: FC = () => {
 
 export const HomeButton: FC = () => {
     return (
-        <div className="relative flex justify-center -translate-y-0.5 transition delay-75 duration-300 ease-out
+        <div className="relative flex justify-center -translate-y-0.5 transition delay-75 duration-200 ease-out
         hover:translate-y-0.5 text-slate-400  hover:text-slate-100"
         >
             <HomeOutlinedIcon sx={{ fontSize: 36 }} />

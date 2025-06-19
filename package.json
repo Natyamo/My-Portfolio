@@ -20,6 +20,8 @@
     "postcss": "^8.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "rough-notation": "^0.5.1",
+    "roughjs": "^4.6.6",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
