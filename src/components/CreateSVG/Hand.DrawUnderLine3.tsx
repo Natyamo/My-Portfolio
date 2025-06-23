@@ -1,17 +1,12 @@
-"use client";
-
 import { AnimationProps } from "@/types/type";
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
-import rough from "roughjs/bin/rough";
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+import rough from "roughjs/bundled/rough.esm";
 
-
-
-const HandDrawnUnderline2: React.FC<AnimationProps> = ({
-
+const HandDrawnCircle: React.FC<AnimationProps> = ({
   children,
   animate = false,
   trigger = false,
-  duration = 700,
+  duration = 500,
   delay = 0,
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -20,18 +15,33 @@ const HandDrawnUnderline2: React.FC<AnimationProps> = ({
 
   useLayoutEffect(() => {
     if (svgRef.current && textRef.current) {
-      const width = textRef.current.offsetWidth;
-      const height = 13;
+      const rect = textRef.current.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
       svgRef.current.innerHTML = "";
 
+      // 楕円のパディング
+      const paddingX = 12;
+      const paddingY = 8;
+
+      svgRef.current.setAttribute("width", `${width + paddingX * 2}`);
+      svgRef.current.setAttribute("height", `${height + paddingY * 2}`);
+
       const rc = rough.svg(svgRef.current);
-      const line = rc.line(0, height / 2, width, height / 2, {
-        stroke: "rgba(31,186,195,0.9)",
-        strokeWidth: 3,
-        roughness: 2,
-        seed: 1,
-      });
-      svgRef.current.appendChild(line);
+      const ellipse = rc.ellipse(
+        (width + paddingX * 2) / 2,
+        (height + paddingY * 2) / 2,
+        width + paddingX,
+        height + paddingY,
+        {
+          stroke: "rgba(31,186,195,0.9)",
+          strokeWidth: 3,
+          roughness: 2,
+          seed: 2,
+          fill: undefined,
+        }
+      );
+      svgRef.current.appendChild(ellipse);
 
       const path = svgRef.current.querySelector("path");
       if (path) {
@@ -49,7 +59,7 @@ const HandDrawnUnderline2: React.FC<AnimationProps> = ({
       const path = svgRef.current.querySelector("path");
       if (path) {
         if (trigger) {
-          // ホバー時：左から右へ線が現れる
+          // ホバー時：線が現れる
           path.style.transition = "none";
           path.style.strokeDashoffset = `${pathLength}`;
           setTimeout(() => {
@@ -57,8 +67,9 @@ const HandDrawnUnderline2: React.FC<AnimationProps> = ({
             path.style.strokeDashoffset = "0";
           }, 20);
         } else {
-          // ホバー解除時：左から右へ線が消える
-          path.style.transition = `stroke-dashoffset ${duration}ms cubic-bezier(0.4,0,0.2,1) 0ms`;
+          // ホバー解除時：線が消える
+          const slowDuration = duration * 2;
+          path.style.transition = `stroke-dashoffset ${slowDuration}ms cubic-bezier(0.4,0,0.2,1) 0ms`;
           path.style.strokeDashoffset = `-${pathLength}`;
         }
       }
@@ -66,23 +77,16 @@ const HandDrawnUnderline2: React.FC<AnimationProps> = ({
   }, [trigger, animate, duration, delay, pathLength]);
 
   return (
-    <div style={{ display: "inline-block", position: "relative" }}>
-      <div ref={textRef} style={{ display: "inline-block" }}>
-        {children}
-      </div>
+    <span>
+      <span ref={textRef}>{children}</span>
       <svg
         ref={svgRef}
-        width="100%"
-        height={12}
-        style={{
-          position: "absolute",
-          left: 0,
-          bottom: 0,
-          pointerEvents: "none",
-        }}
+        className="absolute top-0 -translate-x-3 -translate-y-1 pointer-events-none"
+        style={{ display: "block" }}
       />
-    </div>
+    </span>
   );
 };
 
-export default HandDrawnUnderline2;
+export default HandDrawnCircle;
+

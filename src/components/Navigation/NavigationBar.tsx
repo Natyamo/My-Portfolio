@@ -5,7 +5,9 @@ import "@/styles/globals.css";
 import { NaviContact } from "./NaviButton";
 import { NaviContact2 } from "./NaviButton";
 import { NaviAbout } from "./NaviButton";
+import { NaviSkill } from "./NaviButton";
 import { useSections } from "@/components/Context/Context";
+import { ScrollToTopButton } from "./NaviButton";
 
 const NavButton: FC = () => {
     const { name } = useSections();
@@ -16,11 +18,17 @@ const NavButton: FC = () => {
                 <h1 className="text-[12px] font-daruma1 leading-tight">Biginner Programer</h1>
                 <h2 className="absolute top-1 text-4xl font-daruma1 animate-gradatecolor">{name}</h2>
             </div>
-            <nav className="flex justify-center items-center space-x-5">
+            <nav className="flex justify-center items-center space-x-10"> 
                 <NaviContact2 />
-                <ul>
+                <ul className="flex justify-center items-center space-x-3"> 
                     <li>
                         <NaviAbout />
+                    </li>
+                    <li>
+                        <NaviSkill />
+                    </li>
+                    <li>
+                        <ScrollToTopButton />
                     </li>
                 </ul>
             </nav>
