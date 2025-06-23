@@ -28,7 +28,7 @@ const NewsList: FC = () => {
                     </nav>
                 </div>
             </header>
-            <div className="flex justify-center mb-20 text-5xl font-daruma1">
+            <div className="flex justify-center mt-20 mr-10 mb-20 text-5xl font-daruma1">
                 <HandDrawnUnderline>
                     <h1>My News</h1>
                 </HandDrawnUnderline>
