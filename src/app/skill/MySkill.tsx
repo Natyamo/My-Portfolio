@@ -5,7 +5,7 @@ import SkillText from "@/components/MySkill/SkillText";
 
 const MySkill: FC = () => {
     return (
-        <div className="p-30">
+        <div className="mt-50 p-30">
             <h1 className="flex justify-center font-daruma1 text-7xl animate-gradatecolor">My Skill</h1>
             <div className="mt-20 flex justify-center items-center space-x-20">
                 <SkillCircle
