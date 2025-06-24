@@ -6,7 +6,6 @@ import Link from "next/link";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 import HandDrawnUnderline2 from "../CreateSVG/Hand.DrawUnderLine2";
-import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HandDrawnCircle from "../CreateSVG/Hand.DrawUnderLine3";
 import SendIcon from '@mui/icons-material/Send';

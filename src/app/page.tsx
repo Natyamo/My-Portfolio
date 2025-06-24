@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "@/styles/globals.css";
 import { TopHome } from "@/components/TopHome/TopHome";
 import AboutMe from "./about/AboutMe";

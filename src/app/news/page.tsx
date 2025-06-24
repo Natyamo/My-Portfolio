@@ -4,7 +4,6 @@ import React, { FC } from "react";
 import "@/styles/globals.css";
 import { useSections } from "@/components/Context/Context";
 import { HomeButton } from "@/components/Navigation/NaviButton";
-import { HomeButton2 } from "@/components/Navigation/NaviButton";
 import Link from "next/link";
 import { ScrollToTopButton } from "@/components/Navigation/NaviButton";
 import HandDrawnUnderline from "@/components/CreateSVG/Hand.DrawUnderLine";

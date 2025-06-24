@@ -2,7 +2,6 @@
 
 import React, { FC } from "react";
 import "@/styles/globals.css";
-import { NaviContact } from "./NaviButton";
 import { NaviContact2 } from "./NaviButton";
 import { NaviAbout } from "./NaviButton";
 import { NaviSkill } from "./NaviButton";

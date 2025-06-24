@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import "@/styles/globals.css"
 
-const TopIcon: FC = props => {
+const TopIcon: FC = () => {
     return (
         <div className="p-2">
             <div className="p-2 overflow-hidden">

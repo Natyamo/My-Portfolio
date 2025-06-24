@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import "@/styles/globals.css";
 import SkillCircle from "@/components/MySkill/SkillCircle";
-import SkillText from "@/components/MySkill/SkillText";
 
 const MySkill: FC = () => {
     return (

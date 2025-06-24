@@ -7,7 +7,6 @@ import { TopNewsList } from "@/components/TopNews/TopNews";
 export const name = "Natyamo";
 
 export const TopHome: FC<TopProps> = props => {
-    const { career } = props;
 
     return (
         <div>
