@@ -11,19 +11,19 @@ export const sections = [
     id: "section1",
     title: "初めてのサイト制作",
     date: "2025 / 6/19 (木)",
-    text: text1("section1"),
+    text: text1(),
     },
     { 
     id: "section2",
     title: "My News 実装",
     date: "2025 / 6/19 (木)",
-    text: text2("section2"),
+    text: text2(),
     },
     {
     id: "section3",
     title: "プログラミング学習を始めて感じた「AI」の進歩",
     date: "2025 / 6/24 (火)",
-    text: text3("section3"),
+    text: text3(),
     },
 ]
 
