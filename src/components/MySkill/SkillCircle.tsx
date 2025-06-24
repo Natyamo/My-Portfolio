@@ -36,13 +36,11 @@ const SkillCircle: FC<SkillCircleProps> = ({
 
     useEffect(() => {
         if (!isVisible) return;
-        let frame = 0;
         const totalFrames = ANIMATION_DURATION * FPS;
         const step = targetDegree / totalFrames;
 
         setCurrentDegree(0);
         const interval = setInterval(() => {
-            frame++;
             setCurrentDegree((prev) => {
                 const next = prev + step;
                 if (next >= targetDegree) {

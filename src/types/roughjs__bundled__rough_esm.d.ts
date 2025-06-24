@@ -1,4 +1,6 @@
 declare module 'roughjs/bundled/rough.esm' {
-  const content: any;
+  const content: {
+    svg(svg: SVGSVGElement): RoughSVG;
+  };
   export = content;
 }
