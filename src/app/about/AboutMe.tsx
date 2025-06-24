@@ -16,6 +16,7 @@ const AboutMe: FC = () => {
                         </span>
                     </div>
                 </section>
+            <div className="flex justify-center items-start space-x-5">
                 <section className="flex justify-center items-center">
                     <div className="bg-slate-700/80 p-8 pb-9 rounded-4xl border-4 border-slate-800/40 shadow-xl/40">
                         <h1 className="font-daruma1 text-7xl animate-gradatecolor">Programming</h1>
@@ -30,7 +31,6 @@ const AboutMe: FC = () => {
                         </div>                    
                     </div>
                 </section>
-            <div>
                 <section className="flex justify-center items-center">
                     <div className="bg-slate-700/80 p-8 rounded-4xl border-4 border-slate-800/40 shadow-xl/40">
                         <h1 className="font-daruma1 text-7xl animate-gradatecolor">The future</h1>

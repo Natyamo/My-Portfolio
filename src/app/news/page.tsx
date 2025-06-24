@@ -28,14 +28,14 @@ const NewsList: FC = () => {
                     </nav>
                 </div>
             </header>
-            <div className="flex justify-center mt-20 mr-10 mb-20 text-5xl font-daruma1">
+            <div className="flex justify-center mt-20 mr-10 mb-10 text-5xl font-daruma1">
                 <HandDrawnUnderline>
                     <h1>My News</h1>
                 </HandDrawnUnderline>
             </div>
             <div>
                 {sections?.map(section => (
-                <section className="flex justify-center items-center mb-10" key={section.id}>
+                <section className="flex justify-center items-center pt-30" id={section.id} key={section.id}>
                     <div className="flex-col bg-slate-800 border-3 border-slate-900 p-3 rounded-2xl overflow-auto w-[800px] ...">
                     <h3 className="text-[28px]">【 {section.title} 】<small className="ml-5">{section.date}</small></h3>
                     <div className="mt-8 ml-5 mr-5 mb-2 text-[20px]">{section.text}</div>

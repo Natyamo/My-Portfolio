@@ -5,6 +5,7 @@ import Link from "next/link";
 import HandDrawnUnderline from "../CreateSVG/Hand.DrawUnderLine";
 import { text1 } from "@/app/news/NewsText";
 import { text2 } from "@/app/news/NewsText";
+import { text3 } from "@/app/news/NewsText";
 
 //テキストタイトル作成欄　※テキストは @/news/NewsText 。
 export const sections = [
@@ -19,7 +20,13 @@ export const sections = [
     title: "My News 実装",
     date: "2025 / 6/19 (木)",
     text: text2("section2"),
-    }
+    },
+    {
+    id: "section3",
+    title: "プログラミング学習を始めて感じた「AI」の進歩",
+    date: "2025 / 6/24 (火)",
+    text: text3("section3"),
+    },
 ]
 
 
@@ -32,7 +39,7 @@ export const TopNewsList: FC<TopProps> = () => {
             <ol className="pl-3 mt-10">
                 {sections.map(section => (
                 <li key={section.id} className="border-b-1 border-cyan-600">
-                    ‣ <Link href={`/news#${section.id}`} className="text-[20px] text-blue-500 hover:text-blue-600">
+                    ‣ <Link href={`/news#${section.id}`} className="text-[20px] text-sky-500 hover:text-blue-500">
                         {section.title}
                     </Link>
                     <span className="ml-3 text-[18px]">

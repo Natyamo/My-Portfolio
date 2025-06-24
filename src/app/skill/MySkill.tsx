@@ -56,9 +56,6 @@ const MySkill: FC = () => {
                     }}
                 />
             </div>
-            <div className="flex justify-center">
-                <SkillText />
-            </div>
         </div>
     );
 };

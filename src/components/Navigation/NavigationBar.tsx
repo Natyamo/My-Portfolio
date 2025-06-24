@@ -6,6 +6,7 @@ import { NaviContact } from "./NaviButton";
 import { NaviContact2 } from "./NaviButton";
 import { NaviAbout } from "./NaviButton";
 import { NaviSkill } from "./NaviButton";
+import { NaviNews } from "./NaviButton";
 import { useSections } from "@/components/Context/Context";
 import { ScrollToTopButton } from "./NaviButton";
 
@@ -26,6 +27,9 @@ const NavButton: FC = () => {
                     </li>
                     <li>
                         <NaviSkill />
+                    </li>
+                    <li>
+                        <NaviNews />
                     </li>
                     <li>
                         <ScrollToTopButton />
