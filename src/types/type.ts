@@ -8,7 +8,7 @@ export type TopProps = {
     id?: string;
     title?: string;
     text?: ReactNode;
-    sections?: { id: string; title: string; text: string; date: string; }[];
+    sections?: { id: string; title: string; text: ReactNode; date: string; }[];
 }
 
 export type AnimationProps = {
