@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import "@/styles/globals.css";
 
-export const text1: FC = () => {
+export const text1 = (id: string): React.ReactElement => {
     return (
         <div>
             <p>
@@ -13,7 +13,7 @@ export const text1: FC = () => {
     );
 }
 
-export const text2: FC = () => {
+export const text2 = (id: string): React.ReactElement => {
     return (
         <div>
             <p>
@@ -27,7 +27,7 @@ export const text2: FC = () => {
     );
 }
 
-export const text3: FC = () => {
+export const text3 = (id: string): React.ReactElement => {
     return (
         <div>
             <p className="text-justify">

@@ -3,9 +3,7 @@ import "@/styles/globals.css";
 import { TopProps } from "@/types/type";
 import Link from "next/link";
 import HandDrawnUnderline from "../CreateSVG/Hand.DrawUnderLine";
-import { text1 } from "@/app/news/NewsText";
-import { text2 } from "@/app/news/NewsText";
-import { text3 } from "@/app/news/NewsText";
+import { text1, text2, text3 } from "@/app/news/NewsText";
 
 //テキストタイトル作成欄　※テキストは @/news/NewsText 。
 export const sections = [
