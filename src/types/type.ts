@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 
 export type TopProps = {
     name?: string;
@@ -6,7 +7,7 @@ export type TopProps = {
     langs?: string[];
     id?: string;
     title?: string;
-    text?: string;
+    text?: ReactNode;
     sections?: { id: string; title: string; text: string; date: string; }[];
 }
 
