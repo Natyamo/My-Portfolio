@@ -30,9 +30,9 @@ export const sections = [
 
 export const TopNewsList: FC<TopProps> = () => {
     return (
-        <div className="bg-slate-700/80 border-3 border-slate-800/40 p-5 pt-1 pl-3 pb-8 rounded-2xl shadow-xl/30">
+        <div className="hidden md:block bg-slate-700/80 border-3 border-slate-800/40 p-5 pt-1 pl-3 pb-8 rounded-2xl shadow-xl/30">
             <HandDrawnUnderline>
-                <h2 className="text-[36px] font-daruma1 relative z-0">My News</h2>
+                <h2 className="md:text-[36px] font-daruma1 relative z-0">My News</h2>
             </HandDrawnUnderline>
             <ol className="pl-3 mt-10">
                 {sections.map(section => (

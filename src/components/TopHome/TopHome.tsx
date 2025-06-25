@@ -9,13 +9,9 @@ export const name = "Natyamo";
 export const TopHome: FC<TopProps> = () => {
 
     return (
-        <div>
-            <div className="flex justify-center items-center">
-                <div className="flex justify-center items-center m-30 space-x-10">
-                    <TopProfile />
-                    <TopNewsList />
-                </div>
-            </div>         
-        </div>
+        <div className="flex justify-center items-center mt-10 md:m-30 space-x-10">
+            <TopProfile />
+            <TopNewsList />
+        </div>       
     );
 }

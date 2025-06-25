@@ -10,23 +10,12 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import HandDrawnCircle from "../CreateSVG/Hand.DrawUnderLine3";
 import SendIcon from '@mui/icons-material/Send';
 
-export const NaviContact: FC = () => {
-    return (
-        <div className="relative flex justify-center -translate-y-0.5 transition delay-75 duration-200 ease-out
-        hover:translate-y-0.5 text-slate-400  hover:text-slate-100"
-        >
-            <MailOutlineIcon sx={{ fontSize: 36 }} />
-            <p className="absolute top-7 text-[12px]">contact</p>
-        </div>
-    );
-}
-
-export const NaviContact2: FC = () => {
+export const NaviContact2: FC<{ onClick?: () => void }> = ({ onClick }) => {
   return (
     <div className="relative flex justify-center group transition delay-75 duration-200 ease-out text-slate-400 hover:text-slate-100">      
       <span className="transition-transform duration-200 ease-in-out hover:-translate-y-1 group-hover:scale- group-hover:animate-shake-icon">
-        <Link href="#contact" scroll={true} className="p-1 text-2xl font-daruma1 border-b-1 border-slate-700">
-        <MailOutlineIcon sx={{ fontSize: 36 }} />
+        <Link href="#contact" scroll={true} className="p-1 text-2xl font-daruma1 border-b-1 border-slate-700" onClick={onClick}>
+          <MailOutlineIcon sx={{ fontSize: 36 }} />
         </Link>
       </span>
       <p className="absolute top-8 text-[12px]">Contact</p>    
@@ -77,43 +66,41 @@ export const HomeButton2: FC = () => {
   );
 };
 
-export const NaviAbout: FC = () => {
-    const [hover, setHover] = useState(false);
+export const NaviAbout: FC<{ onClick?: () => void }> = ({ onClick }) => {
+  const [hover, setHover] = useState(false);
 
-    return (
-        <div className="cursor-pointer"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            style={{ display: "inline-block", cursor: "pointer" }}
-        >
-            <HandDrawnUnderline2 animate trigger={hover} duration={700}>
-                <Link href="#about" scroll={true} className="p-1 text-2xl font-daruma1"
-                >
-                    About
-                </Link>
-            </HandDrawnUnderline2>
-        </div>
-    );
-}
+  return (
+    <div className="cursor-pointer"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{ display: "inline-block", cursor: "pointer" }}
+    >
+      <HandDrawnUnderline2 animate trigger={hover} duration={700}>
+        <Link href="#about" scroll={true} className="p-1 text-2xl font-daruma1" onClick={onClick}>
+          About
+        </Link>
+      </HandDrawnUnderline2>
+    </div>
+  );
+};
 
-export const NaviSkill: FC = () => {
-    const [hover, setHover] = useState(false);
+export const NaviSkill: FC<{ onClick?: () => void }> = ({ onClick }) => {
+  const [hover, setHover] = useState(false);
 
-    return (
-        <div className="cursor-pointer"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            style={{ display: "inline-block", cursor: "pointer" }}
-        >
-            <HandDrawnUnderline2 animate trigger={hover} duration={700}>
-                <Link href="#skill" scroll={true} className="p-1 text-2xl font-daruma1"
-                >
-                  Skill
-                </Link>
-            </HandDrawnUnderline2>
-        </div>
-    );
-}
+  return (
+    <div className="cursor-pointer"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{ display: "inline-block", cursor: "pointer" }}
+    >
+      <HandDrawnUnderline2 animate trigger={hover} duration={700}>
+        <Link href="#skill" scroll={true} className="p-1 text-2xl font-daruma1" onClick={onClick}>
+          Skill
+        </Link>
+      </HandDrawnUnderline2>
+    </div>
+  );
+};
 
 export const ScrollToTopButton: React.FC = () => {
   const SCROLL_THRESHOLD = 200; // 何pxスクロールしたら活性化するか
@@ -161,24 +148,23 @@ export const ScrollToTopButton: React.FC = () => {
   );
 };
 
-export const NaviNews: FC = () => {
+export const NaviNews: FC<{ onClick?: () => void }> = ({ onClick }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <div className="cursor-pointer"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            style={{ display: "inline-block", cursor: "pointer" }}
-        >
-            <HandDrawnUnderline2 animate trigger={hover} duration={700}>
-                <Link href="/news" scroll={true} className="p-1 text-2xl font-daruma1"
-                >
-                  News
-                </Link>
-            </HandDrawnUnderline2>
-        </div>
-  )
-}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{ display: "inline-block", cursor: "pointer" }}
+    >
+      <HandDrawnUnderline2 animate trigger={hover} duration={700}>
+        <Link href="/news" scroll={true} className="p-1 text-2xl font-daruma1" onClick={onClick}>
+          News
+        </Link>
+      </HandDrawnUnderline2>
+    </div>
+  );
+};
 
 export const Formbutton: FC<{ disabled?: boolean }> = ({ disabled = false }) => {
   const [hover, setHover] = useState(false);
@@ -190,7 +176,6 @@ export const Formbutton: FC<{ disabled?: boolean }> = ({ disabled = false }) => 
         disabled={disabled}
         aria-label="送信"
         className={`
-          ml-10
           transition-all duration-400 ease-out
           hover:-translate-y-0.5 hover:scale-110
           ${disabled ? "opacity-50 cursor-not-allowed" : ""}
@@ -205,5 +190,39 @@ export const Formbutton: FC<{ disabled?: boolean }> = ({ disabled = false }) => 
         </HandDrawnCircle>
       </button>
     </div>
+  );
+};
+
+export const MobileScrollToTopButton: React.FC = () => {
+  const SCROLL_THRESHOLD = 200; // 何pxスクロールしたら活性化するか
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setActive(window.scrollY > SCROLL_THRESHOLD);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <div className="relative transition delay-75 duration-500 ease-in-out">
+      <button
+      onClick={handleClick}
+      aria-label="ページの先頭へ戻る"
+      className={`
+        fixed bottom-5 right-8 bg-slate-700 rounded-full border-4 p-1 shadow-xl/40
+      transition-all duration-400 ease-out hover:-translate-y-0.5 group-hover:scale-125
+      ${active ? "opacity-100 cursor-pointer text-slate-100" : "opacity-0 pointer-events-none text-slate-400"}
+      `}
+      >
+        <ArrowUpwardIcon sx={{ fontSize: 30 }} />  
+      </button>
+    </div>
+  
   );
 };

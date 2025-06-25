@@ -16,13 +16,15 @@ const TopText: FC<TopProps> = () => {
     }
 
     return (
-        <div className="ml-10 mt-15 text-center">
+        <div className="md:ml-10 md:mt-15 text-center">
             <p>毎日！楽しく！プログラミングを勉強しています！</p>
-            <ul className="flex items-center mt-5 ml-20 space-x-2">
-                <li>プログラミング歴： </li>
-                <li className="mb-2 font-daruma1 text-[30px]">{career}</li>
-                <li><small>{getMonthOrYear(career)}</small></li>
-            </ul>
+            <span className="w-80 md:w-full flex justify-center items-center md:mt-5 md:ml-20 space-x-2">
+                <p>
+                    プログラミング歴： 
+                    <strong className="md:mb-2 font-daruma1 md:text-[30px] text-2xl">{career}</strong>
+                    <small> {getMonthOrYear(career)}</small>
+                </p>
+            </span>
         </div>
     )
 }

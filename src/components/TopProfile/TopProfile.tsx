@@ -8,13 +8,15 @@ import TopText from "./TopText";
 
 const TopProfile: FC<TopProps> = () => {
     return (
-        <div>
-            <section className="bg-slate-700/80 m-10 mt-20 p-10 rounded-4xl border-4 border-slate-800/40 shadow-xl/40">
-                <div className="flex">
+        <div className="md:w-1/2">
+            <section className="relative left-4 bg-slate-700/80 m-10 md:mt-20 mt-0 md:p-10 p-5 rounded-4xl border-4 border-slate-800/40 shadow-xl/40">
+                <div className="hidden md:flex">
                     <TopTitle />
                     <TopIcon />
                 </div>
-                <TopText />
+                <div>
+                    <TopText />
+                </div>
             </section>
         </div>
     );

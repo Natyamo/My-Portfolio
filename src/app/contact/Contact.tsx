@@ -26,9 +26,9 @@ const ContactForm: FC = () => {
     };
 
     return (
-        <div className="m-30">
-            <section className="bg-slate-700/80 p-8 rounded-4xl border-4 border-slate-800/40 shadow-xl/40 space-y-4">
-                <h2 className="mb-8 font-daruma1 text-7xl animate-gradatecolor">Contact</h2>
+        <div className="flex justify-center md:m-30">
+            <section className=" w-80 md:w-full bg-slate-700/80 p-8 pt-3 pb-3 mt-10 mb-20 rounded-4xl border-4 border-slate-800/40 shadow-xl/40 space-y-4">
+                <h2 className="font-daruma1 text-5xl md:text-7xl animate-gradatecolor">Contact</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label className="block font-daruma1">Name</label>

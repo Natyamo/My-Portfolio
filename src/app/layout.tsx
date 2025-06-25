@@ -36,7 +36,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable} font-sans antialiased bg-slate-600 text-white text-2xl`}
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${anton.variable} ${darumadrop1.variable} ${raleway.variable}
+        font-sans antialiased bg-slate-600 text-white text-base md:text-2xl
+        overflow-x-hidden
+        `}
       >
         <SectionsProvider sections={sections} name={name}>
           {children}

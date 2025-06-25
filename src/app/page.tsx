@@ -4,22 +4,30 @@ import AboutMe from "./about/AboutMe";
 import NavButton from "@/components/Navigation/NavigationBar";
 import MySkill from "./skill/MySkill";
 import ContactForm from "./contact/Contact";
+import NaviMobile from "@/components/Navigation/NaviMobile";
+import { MobileScrollToTopButton } from "@/components/Navigation/NaviButton";
 
 export default function Home() {
   return (
     <div>
-      <header className="sticky top-1 z-50">
+      <header className="sticky top-8 z-50">
         <NavButton />
+        <NaviMobile />
       </header>
-      <TopHome />
-      <div id="about" className="relative m-40 p-5">
+      <div>
+        <TopHome />
+      </div>
+      <div id="about" className="p-10">
         <AboutMe />
       </div>
-      <div id="skill">
+      <div id="skill" className="hidden md:block">
         <MySkill />
       </div>
       <div id="contact">
         <ContactForm />
+      </div>
+      <div className="md:hidden">
+        <MobileScrollToTopButton />
       </div>
     </div>
   );

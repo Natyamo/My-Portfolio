@@ -5,7 +5,7 @@ import "@/styles/globals.css"
 const TopIcon: FC = () => {
     return (
         <div className="p-2">
-            <div className="p-2 overflow-hidden">
+            <div className="p-2 overflow-hidden sm:w-32 sm:h-32">
                 <Image
                     src="/TitleIcon.png"
                     alt="My-Icon"
