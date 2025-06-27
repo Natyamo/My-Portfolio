@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ScrollToTopButton } from "@/components/Navigation/NaviButton";
 import HandDrawnUnderline from "@/components/CreateSVG/Hand.DrawUnderLine";
 import { MobileScrollToTopButton } from "@/components/Navigation/NaviButton";
+import Footer from "@/components/Footer/Footer";
 
 const NewsList: FC = () => {
     const { sections, name } = useSections();
@@ -48,6 +49,7 @@ const NewsList: FC = () => {
             <div className="md:hidden">
                 <MobileScrollToTopButton />
             </div>
+            <Footer />
         </div>
     );
 }

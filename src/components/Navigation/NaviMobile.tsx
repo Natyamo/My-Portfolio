@@ -6,6 +6,8 @@ import { NaviContact2 } from "./NaviButton";
 import { NaviAbout } from "./NaviButton";
 import { NaviSkill } from "./NaviButton";
 import { NaviNews } from "./NaviButton";
+import { XButton, GithubButton } from "./NaviButton";
+
 
 const NaviMobile: FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +37,10 @@ const NaviMobile: FC = () => {
                     <NaviAbout onClick={() => setMenuOpen(false)} />
                     <NaviSkill onClick={() => setMenuOpen(false)} />
                     <NaviNews onClick={() => setMenuOpen(false)} />
+                    <div className="flex flex-col mt-10 space-y-3">
+                        <XButton />
+                        <GithubButton />
+                    </div>
                 </nav>
             </div>
             {/* オーバーレイ（メニューオープン時のみ表示） */}

@@ -226,3 +226,57 @@ export const MobileScrollToTopButton: React.FC = () => {
   
   );
 };
+
+export const XButton: React.FC = () => (
+    <a
+        href="https://x.com/Natyam0_lol0845"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900 transition"
+    >
+        <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 24 24">
+            <path d="M22.162 0h-4.327l-5.835 8.26L6.03 0H0l8.44 12.252L0 24h4.327l6.001-8.496L17.97 24H24l-8.44-12.252L24 0zm-3.23 21.5l-6.932-9.81-6.932 9.81H2.77l7.23-10.24L2.77 2.5h2.298l6.932 9.81 6.932-9.81h2.298l-7.23 10.24 7.23 10.24h-2.298z"/>
+        </svg>
+        X (Twitter)
+    </a>
+);
+
+export const GithubButton: React.FC = () => (
+    <a
+        href="https://github.com/Natyamo"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition"
+    >
+        <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.921.43.372.823 1.104.823 2.225v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        GitHub
+    </a>
+);
+
+export const MiniXButton: React.FC = () => (
+    <a
+        href="https://x.com/Natyam0_lol0845"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center bg-slate-700 text-white"
+    >
+        <svg width="15" height="15" fill="currentColor"viewBox="0 0 24 24">
+            <path d="M22.162 0h-4.327l-5.835 8.26L6.03 0H0l8.44 12.252L0 24h4.327l6.001-8.496L17.97 24H24l-8.44-12.252L24 0zm-3.23 21.5l-6.932-9.81-6.932 9.81H2.77l7.23-10.24L2.77 2.5h2.298l6.932 9.81 6.932-9.81h2.298l-7.23 10.24 7.23 10.24h-2.298z"/>
+        </svg>
+    </a>
+);
+
+export const MiniGithubButton: React.FC = () => (
+    <a
+        href="https://github.com/Natyamo"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center px-2 py-2 bg-slate-700 text-white"
+    >
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.624-5.475 5.921.43.372.823 1.104.823 2.225v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+    </a>
+);

@@ -7,6 +7,8 @@ import ContactForm from "./contact/Contact";
 import NaviMobile from "@/components/Navigation/NaviMobile";
 import { MobileScrollToTopButton } from "@/components/Navigation/NaviButton";
 import MyMobileSkillBar from "@/components/MySkill/MobileMySkill";
+import Footer from "@/components/Footer/Footer";
+
 export default function Home() {
   return (
     <div>
@@ -32,6 +34,9 @@ export default function Home() {
       <div className="md:hidden">
         <MobileScrollToTopButton />
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

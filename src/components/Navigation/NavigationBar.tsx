@@ -9,6 +9,7 @@ import { NaviNews } from "./NaviButton";
 import { useSections } from "@/components/Context/Context";
 import { ScrollToTopButton } from "./NaviButton";
 import TopIcon from "../TopProfile/TopIcon";
+import { XButton, GithubButton } from "./NaviButton";
 
 const NavButton: FC = () => {
     const { name } = useSections();
@@ -26,7 +27,7 @@ const NavButton: FC = () => {
             </div>
             
             {/* PC用ナビゲーション */}
-            <nav className="hidden md:flex justify-center items-center space-x-10">
+            <nav className="relative hidden md:flex justify-center items-center space-x-10">
                 <NaviContact2 />
                 <ul className="flex justify-center items-center space-x-3">
                     <li>
@@ -41,6 +42,14 @@ const NavButton: FC = () => {
                     <li>
                         <ScrollToTopButton />
                     </li>
+                    <div className="absolute right-10 flex justify-center space-x-3">
+                        <li>
+                            <XButton />
+                        </li>                   
+                        <li>
+                            <GithubButton />
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </div>
