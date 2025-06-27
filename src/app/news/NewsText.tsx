@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import React from "react";
+import ScrollableText from "@/components/TopNews/ScrollableText";
 
 export const text1 = (): React.ReactElement => {
     return (
@@ -6,11 +8,12 @@ export const text1 = (): React.ReactElement => {
             <p>
                 初めてのサイト制作として、ポートフォリオサイトを制作してみました。
                 <br />
+                <br />
                 プログラミングは覚えることがたくさんあって大変ですが、日々楽しみながら勉強しています。
             </p>
         </div>
     );
-}
+};
 
 export const text2 = (): React.ReactElement => {
     return (
@@ -20,19 +23,21 @@ export const text2 = (): React.ReactElement => {
                 <br />
                 「My News」をこのサイトに実装しました。
                 <br />
+                <br />
                 これから定期的に投稿していこうと思います。
             </p>
         </div>
     );
-}
+};
 
 export const text3 = (): React.ReactElement => {
     return (
-        <div>
+        <ScrollableText>
             <p className="text-justify">
                 プログラミングの学習を始めて、約３ヶ月が過ぎました。
                 <br />
                 ここで少し、私のプログラミングの勉強法についてお話ししようと思います。
+                <br />
                 <br />
                 メインページの About でも書いている通り、
                 <br />
@@ -44,6 +49,7 @@ export const text3 = (): React.ReactElement => {
                 <br />
                 プログラミングの表面的な部分の知識については抑えれたかなと思います。
                 <br />
+                <br />
                 ただ、表面的な部分からより詳しく解説しているような動画を調べようとすると、
                 <br />
                 自分の調べ方が悪いのか、詳しすぎる、
@@ -51,6 +57,7 @@ export const text3 = (): React.ReactElement => {
                 プログラミング玄人向けの動画ばかりがヒットするようになって、
                 <br />
                 自分の実力に合った情報が少ないと思うようになりました。
+                <br />
                 <br />
                 そこで、次は参考書に手を出し始めました。ネットで買ったり、実際に書店に行ったりして、
                 <br />
@@ -74,9 +81,11 @@ export const text3 = (): React.ReactElement => {
                 <br />
                 常に勉強をし続けないといけない分野なんだなと改めて感じました。
                 <br />
+                <br />
                 進歩といえば、私がこれまでのプログラミング学習を通して、
                 <br />
                 常にお世話になってきた存在がいます。
+                <br />
                 <br />
                 それが、AI です。
                 <br />
@@ -96,15 +105,18 @@ export const text3 = (): React.ReactElement => {
                 <br />
                 驚異的なスピードで進んでいるんだと身をもって感じました。
                 <br />
+                <br />
                 ただ、この機能を使い続けて頼りきりになるのではなく、きちんと自分の知識となるように、
                 <br />
                 自動で作成された部品も、どういう記法で、どういう処理を行っているのか調べて、
                 <br />
                 吸収することが大事だと思いました。
                 <br />
+                <br />
                 今は学習の補助輪として利用しつつ、
                 <br />
-                これからも AI と共にプログラミングを楽しく学んでいこうと思います。</p>
-        </div>
-    )
-}
+                これからも AI と共にプログラミングを楽しく学んでいこうと思います。
+            </p>
+        </ScrollableText>
+    );
+};

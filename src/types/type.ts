@@ -26,3 +26,8 @@ export type SkillCircleProps = {
         bg: string;      // 背景色
     };
 };
+
+export type ScrollableTextProps = {
+    children: React.ReactNode;
+    maxLines?: number; // デフォルト20行
+};

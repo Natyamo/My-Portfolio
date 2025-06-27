@@ -21,7 +21,7 @@ export const sections = [
     },
     {
     id: "section3",
-    title: "プログラミング学習を始めて感じた「AI」の進歩",
+    title: " AI の進歩",
     date: "2025 / 6/24 (火)",
     text: text3(),
     },

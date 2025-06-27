@@ -6,7 +6,7 @@ import MySkill from "./skill/MySkill";
 import ContactForm from "./contact/Contact";
 import NaviMobile from "@/components/Navigation/NaviMobile";
 import { MobileScrollToTopButton } from "@/components/Navigation/NaviButton";
-
+import MyMobileSkillBar from "@/components/MySkill/MobileMySkill";
 export default function Home() {
   return (
     <div>
@@ -22,6 +22,9 @@ export default function Home() {
       </div>
       <div id="skill" className="hidden md:block">
         <MySkill />
+      </div>
+      <div id="skill" className="md:hidden">
+        <MyMobileSkillBar />
       </div>
       <div id="contact">
         <ContactForm />
