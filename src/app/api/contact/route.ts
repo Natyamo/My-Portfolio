@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+const globalForPrisma = global as unknown as { prisma: PrismaClient };
+export const prisma =
+  globalForPrisma.prisma ||
+  new PrismaClient({
+    log: ["query"],
+  });
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
@@ -11,8 +18,11 @@ export async function POST(req: NextRequest) {
       data: { name, email, message },
     });
     return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json({ success: false, error }, { status: 500 });
+  } catch (error: any) {
+    return NextResponse.json(
+      { success: false, error: error.message ?? "サーバーエラー" },
+      { status: 500 }
+    );
   }
 }
 
