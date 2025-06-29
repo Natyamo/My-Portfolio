@@ -34,10 +34,10 @@ const ContactList: FC = () => {
     return (
         <div className="flex justify-center md:m-30">
             <section className="w-80 md:w-full bg-slate-700/80 p-8 pt-3 pb-3 mt-10 mb-20 rounded-4xl border-4 border-slate-800/40 shadow-xl/40 space-y-4">
-                <h2 className="font-daruma1 text-4xl md:text-6xl animate-gradatecolor">お問い合わせ一覧</h2>
+                <h2 className="text-4xl md:text-6xl">お問い合わせ一覧</h2>
                 <div className="space-y-4">
                     {contacts.length === 0 ? (
-                        <div>お問い合わせはありません。</div>
+                        <div className="mt-10">お問い合わせはありません。</div>
                     ) : (
                         contacts.map((contact) => (
                             <div key={contact.id} className="bg-slate-600 rounded-lg p-4 border border-slate-500">
