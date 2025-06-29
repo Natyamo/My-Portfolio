@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import React from "react";
+import React, { FC } from "react";
 import ScrollableText from "@/components/TopNews/ScrollableText";
 
 export const text1 = (): React.ReactElement => {
@@ -19,12 +19,13 @@ export const text2 = (): React.ReactElement => {
     return (
         <div>
             <p>
-                近況やプログラミングを学んでいく上で印象に残ったことを紹介する
+                6/19(木)より、Ver.1.1.0にアップデートされました。
                 <br />
-                「My News」をこのサイトに実装しました。
+                ・ My News をこのサイトに実装しました。
                 <br />
-                <br />
-                これから定期的に投稿していこうと思います。
+                アップデート状況や近況、また
+                <br/>
+                プログラミングを学んでいく上で印象に残ったことを紹介していきます。
             </p>
         </div>
     );
@@ -120,3 +121,25 @@ export const text3 = (): React.ReactElement => {
         </ScrollableText>
     );
 };
+
+export const text4 = (): React.ReactElement => {
+    return (
+        <div>
+            <p>
+                6/29(日)より、Ver.1.2.0にアップデートされました。
+                <br/>
+                内容は以下の通りです。
+                <br/>
+                ・ モバイルデバイスでの当サイトの閲覧を改善しました。
+                <br/>
+                ・ 当サイト制作者である Natyamo の X(旧twitter)、Githubアカウントへ移動できる
+                <br/>
+                 ボタンを実装しました。
+                <br/>
+                ・ 連絡用フォーム欄を実装しました。何か連絡がある際は、
+                <br/>
+                 当サイト下部にあるフォーム欄、またはX(旧twitter)にご連絡ください。
+            </p>
+        </div>
+    );
+}

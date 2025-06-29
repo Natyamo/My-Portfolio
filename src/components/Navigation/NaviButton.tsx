@@ -237,7 +237,7 @@ export const XButton: React.FC = () => (
         <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 24 24">
             <path d="M22.162 0h-4.327l-5.835 8.26L6.03 0H0l8.44 12.252L0 24h4.327l6.001-8.496L17.97 24H24l-8.44-12.252L24 0zm-3.23 21.5l-6.932-9.81-6.932 9.81H2.77l7.23-10.24L2.77 2.5h2.298l6.932 9.81 6.932-9.81h2.298l-7.23 10.24 7.23 10.24h-2.298z"/>
         </svg>
-        X (Twitter)
+        X (旧Twitter)
     </a>
 );
 

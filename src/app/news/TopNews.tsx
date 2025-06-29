@@ -2,20 +2,20 @@ import React, { FC } from "react";
 import "@/styles/globals.css";
 import { TopProps } from "@/types/type";
 import Link from "next/link";
-import HandDrawnUnderline from "../CreateSVG/Hand.DrawUnderLine";
-import { text1, text2, text3 } from "@/app/news/NewsText";
+import HandDrawnUnderline from "@/components/CreateSVG/Hand.DrawUnderLine";
+import { text1, text2, text3, text4 } from "@/app/news/NewsText";
 
 //テキストタイトル作成欄　※テキストは @/news/NewsText 。
 export const sections = [
     { 
     id: "section1",
-    title: "初めてのサイト制作",
+    title: "初めてのサイト制作(Ver.1.0.0)",
     date: "2025 / 6/19 (木)",
     text: text1(),
     },
     { 
     id: "section2",
-    title: "My News 実装",
+    title: "アップデートのお知らせ(Ver1.1.0)",
     date: "2025 / 6/19 (木)",
     text: text2(),
     },
@@ -24,6 +24,12 @@ export const sections = [
     title: " AI の進歩",
     date: "2025 / 6/24 (火)",
     text: text3(),
+    },
+    {
+    id: "section4",
+    title: "アップデートのお知らせ(Ver.1.2.1)",
+    date: "2025 / 6/29 (日)",
+    text: text4(),
     },
 ]
 
