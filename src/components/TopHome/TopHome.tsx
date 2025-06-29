@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import "@/styles/globals.css";
 import { TopProps } from "@/types/type";
 import TopProfile from "@/components/TopProfile/TopProfile";
-import { TopNewsList } from "@/components/TopNews/TopNews";
+import { TopNewsList } from "@/app/news/TopNews";
 
 export const name = "Natyamo";
 
