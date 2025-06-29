@@ -17,17 +17,21 @@ export const text1 = (): React.ReactElement => {
 export const text2 = (): React.ReactElement => {
     return (
         <div>
-            <p>
+            <div>
                 6/19(木)より、Ver.1.1.0にアップデートされました。
                 <br />
                 <br />
-                ・ My News をこのサイトに実装しました。
-                <br />
-                <br />
-                アップデート状況や近況、また
-                <br/>
-                プログラミングを学んでいく上で印象に残ったことを紹介していきます。
-            </p>
+                <ul className="list-disc pl-6">
+                <li>My News をこのサイトに実装しました。
+                    <br/>
+                    <p className="mt-3">
+                        アップデート状況や近況、プログラミングを学んでいく上で印象に残ったこと
+                        <br/>
+                        を紹介していきます。
+                    </p>
+                </li>  
+                </ul>         
+            </div>
         </div>
     );
 };
@@ -126,24 +130,32 @@ export const text3 = (): React.ReactElement => {
 export const text4 = (): React.ReactElement => {
     return (
         <div>
-            <p>
+            <div>
                 6/29(日)より、Ver.1.2.0にアップデートされました。
                 <br/>
-                <br />
-                内容は以下の通りです。
+                <p className="ml-8">内容は以下の通りです。</p>
                 <br/>
-                ・ モバイルデバイスでの当サイトの閲覧を改善しました。
                 <br/>
-                <br />
-                ・ 当サイト制作者である Natyamo の X(旧twitter)、Githubアカウントへ移動できる
-                <br/>
-                 ボタンを実装しました。
-                <br/>
-                <br />
-                ・ 連絡用フォーム欄を実装しました。何か連絡がある際は、
-                <br/>
-                 当サイト下部にあるフォーム欄、またはX(旧twitter)にご連絡ください。
-            </p>
+                <ul className="list-disc pl-6">
+                    <li>モバイルデバイスでの当サイトの閲覧を改善しました。</li>
+                    <br/>
+                    <li>
+                        当サイト制作者である Natyamo の X(旧twitter)、Githubアカウントへ移動できる
+                        <br/>
+                        ボタンを実装しました。
+                    </li>
+                    <br/>
+                    <li>
+                        送信用フォーム欄を実装しました。
+                        <br/>
+                        <p className="mt-3">
+                            私へのコンタクトや連絡をされる際は、当サイト下部にあるフォーム欄、
+                            <br/>
+                            またはX(旧twitter)にご連絡ください。
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
