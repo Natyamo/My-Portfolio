@@ -8,21 +8,26 @@ const AdminContactList = () => {
     const [inputUser, setInputUser] = useState("");
     const [inputPass, setInputPass] = useState("");
     const [error, setError] = useState("");
-
-    // .envの値はクライアントには直接渡せないため、ここでは値を直書きしています。
-    // 本番環境ではAPI経由の認証やセッション管理を推奨します。
-    const ADMIN_USER = "admin";
-    const ADMIN_PASS = "koyoute06bigin24";
-
-    const handleLogin = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (inputUser === ADMIN_USER && inputPass === ADMIN_PASS) {
+    
+    const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    try {
+        const res = await fetch("/api/admin/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: inputUser, password: inputPass }),
+        });
+        const data = await res.json();
+        if (data.success) {
             setIsAuth(true);
-            setError("");
         } else {
             setError("ユーザー名またはパスワードが違います。");
         }
-    };
+    } catch {
+        setError("サーバーエラーが発生しました。");
+    }
+};
 
     if (!isAuth) {
         return (

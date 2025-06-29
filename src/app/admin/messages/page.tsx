@@ -1,7 +1,5 @@
-import AdminMessages from "@/components/AdminMessage/AdminMessage";
+import AdminContactList from "../../contact/AdminContactList";
 
 export default function AdminMessagesPage() {
-  return <AdminMessages />;
+    return <AdminContactList />;
 }
-
-///admin/messagesでアクセス可能
