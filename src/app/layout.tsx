@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Darumadrop_One, Raleway } from "next/font/google";
 import "@/styles/globals.css";
 import { SectionsProvider } from "@/components/Context/Context";
-import { sections } from "@/components/TopNews/TopNews";
+import { sections } from "@/app/news/TopNews";
 import { name } from "@/components/TopHome/TopHome";
 
 export const metadata: Metadata = {
