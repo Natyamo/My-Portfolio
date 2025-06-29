@@ -1,15 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-const ADMIN_USER = process.env.ADMIN_USER;
-const ADMIN_PASS = process.env.ADMIN_PASS;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method !== "POST") {
-        return res.status(405).end();
+export async function POST(request: Request) {
+    const { username, password } = await request.json();
+    if (
+        username === process.env.ADMIN_USER &&
+        password === process.env.ADMIN_PASS
+    ) {
+        return NextResponse.json({ success: true });
     }
-    const { username, password } = req.body;
-    if (username === ADMIN_USER && password === ADMIN_PASS) {
-        return res.status(200).json({ success: true });
-    }
-    return res.status(401).json({ success: false, message: "認証失敗" });
+    return NextResponse.json({ success: false, message: "認証失敗" }, { status: 401 });
 }
