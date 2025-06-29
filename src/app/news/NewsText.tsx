@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import React, { FC } from "react";
 import ScrollableText from "@/components/TopNews/ScrollableText";
 
 export const text1 = (): React.ReactElement => {
