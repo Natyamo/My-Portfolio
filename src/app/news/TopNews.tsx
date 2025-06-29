@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { TopProps } from "@/types/type";
 import Link from "next/link";
 import HandDrawnUnderline from "@/components/CreateSVG/Hand.DrawUnderLine";
-import { text1, text2, text3, text4 } from "@/app/news/NewsText";
+import { text1, text2, text3, text4, text5 } from "@/app/news/NewsText";
 
 //テキストタイトル作成欄　※テキストは @/news/NewsText 。
 export const sections = [
@@ -30,6 +30,12 @@ export const sections = [
     title: "アップデートのお知らせ(Ver.1.2.1)",
     date: "2025 / 6/29 (日)",
     text: text4(),
+    },
+    {
+    id: "section5",
+    title: "アップデートのお知らせ(Ver.1.2.2)",
+    date: "2025 / 6/29 (日)",
+    text: text5(),
     },
 ]
 

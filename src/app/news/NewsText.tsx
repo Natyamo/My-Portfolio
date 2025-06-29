@@ -130,32 +130,48 @@ export const text3 = (): React.ReactElement => {
 export const text4 = (): React.ReactElement => {
     return (
         <div>
-            <div>
-                6/29(日)より、Ver.1.2.0にアップデートされました。
+            6/29(日)より、Ver.1.2.1にアップデートされました。
+            <br/>
+            <p className="ml-8">内容は以下の通りです。</p>
+            <br/>
+            <br/>
+            <ul className="list-disc pl-6">
+                <li>モバイルデバイスでの当サイトの閲覧を改善しました。</li>
                 <br/>
-                <p className="ml-8">内容は以下の通りです。</p>
-                <br/>
-                <br/>
-                <ul className="list-disc pl-6">
-                    <li>モバイルデバイスでの当サイトの閲覧を改善しました。</li>
+                <li>
+                    当サイト制作者である Natyamo の X(旧twitter)、Githubアカウントへ移動できる
                     <br/>
-                    <li>
-                        当サイト制作者である Natyamo の X(旧twitter)、Githubアカウントへ移動できる
-                        <br/>
-                        ボタンを実装しました。
-                    </li>
+                    ボタンを実装しました。
+                </li>
+                <br/>
+                <li>
+                    送信用フォーム欄を実装しました。
                     <br/>
-                    <li>
-                        送信用フォーム欄を実装しました。
+                    <p className="mt-3">
+                        私へのコンタクトや連絡をされる際は、当サイト下部にあるフォーム欄、
                         <br/>
-                        <p className="mt-3">
-                            私へのコンタクトや連絡をされる際は、当サイト下部にあるフォーム欄、
-                            <br/>
-                            またはX(旧twitter)にご連絡ください。
-                        </p>
-                    </li>
-                </ul>
-            </div>
+                        またはX(旧twitter)にご連絡ください。
+                    </p>
+                </li>
+            </ul>
+        </div>
+    );
+}
+
+export const text5 = (): React.ReactElement => {
+    return (
+        <div>
+            6/29(日)より、Ver.1.2.2にアップデートされました。
+            <br/>
+            <p className="ml-8">内容は以下の通りです。</p>
+            <br/>
+            <br/>
+            <ul className="list-disc pl-6">
+                <li>Contactのフォーム欄で送信したテキストが
+                    <br/>
+                    閲覧できていなかった不具合を改善しました。
+                </li>                
+            </ul>
         </div>
     );
 }
