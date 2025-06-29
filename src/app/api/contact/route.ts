@@ -18,9 +18,13 @@ export async function POST(req: NextRequest) {
       data: { name, email, message },
     });
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    let message = "サーバーエラー";
+    if (error instanceof Error) {
+      message = error.message;
+    }
     return NextResponse.json(
-      { success: false, error: error.message ?? "サーバーエラー" },
+      { success: false, error: message },
       { status: 500 }
     );
   }
