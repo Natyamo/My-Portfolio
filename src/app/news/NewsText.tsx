@@ -175,3 +175,17 @@ export const text5 = (): React.ReactElement => {
         </div>
     );
 }
+
+export const text6 = (): React.ReactElement => {
+    return (
+        <div>
+            今日から、新たなアプリ開発に着手し始めました。
+            <br/>
+            このサイトを作成したときよりも難易度の高いことに挑戦しようと思っています。
+            <br/>
+            ポートフォリオサイトの更新は今後も続けていきたいので、
+            <br/>
+            Mynewsで制作の過程を少しずつお話しできたらなと思います。
+        </div>
+    );
+}
